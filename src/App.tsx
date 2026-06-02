@@ -4,17 +4,17 @@ import {
   ChevronDown, ChevronUp, Layers, Compass, Award 
 } from 'lucide-react';
 
-// 中英文精细化文本字典 —— 完好保留，未改动任何一字
+// 中英文精细化文本字典 —— 已精准优化核心定位与邮箱字段
 const content = {
   zh: {
     navTitle: "Martin Xu",
-    contactBtn: "建立联系",
+    contactBtn: "xch10400@gmail.com",
     heroHi: "你好，我是 Martin Xu。",
-    heroSub: "正在积极进化的 AI 学习者 | B2B 科技大客销售 | 运行 🏃‍♂️ 马拉松跑者 & 热爱生活者",
+    heroSub: "正在积极进化的 AI 学习者 | B2B 大客户销售 | 🏃‍♂️ 马拉松跑者 & 热爱生活者", // ✨ 精简核心定位
     heroQuote: "“用坚韧攻坚大客户，用前沿工具拆解商业谜题。”",
     
     capTitle: "核心商业护城河",
-    capSub: "基于第一性原理，构建自己的销售SOP。",
+    capSub: "基于第一性原理，构建自己的销售SOP",
     caps: [
       {
         title: "复杂大单攻坚与客情操盘",
@@ -102,13 +102,15 @@ const content = {
         title: "卓越销售的进化模型",
         desc: "保持‘AI菜鸟’的空杯心态，手搓代码、独立部署场景，用技术共情力打破与架构师的隔阂；在复杂的利益矩阵中纵横捭阖，平衡技术激情与合规风控；将马拉松训练中习得的策略性耐力与复原力注入长周期大客攻坚，稳健地将项目带过终点线。"
       }
-    ]
+    ],
+    ctaTitle: "启动下一场大客攻坚",
+    ctaSub: "正在寻找一位兼具技术共情力与卓越操盘能力的商业伙伴？欢迎随时联系。"
   },
   en: {
     navTitle: "Martin Xu",
-    contactBtn: "Connect",
+    contactBtn: "xch10400@gmail.com",
     heroHi: "Hi, I am Martin Xu.",
-    heroSub: "A B2B Tech Sales exploring GenAI | 🏃‍♂️ Marathon Runner & Lifelong Learner",
+    heroSub: "A B2B Enterprise Sales exploring GenAI | 🏃‍♂️ Marathon Runner & Lifelong Learner", // ✨ 英文同步对齐
     heroQuote: "\"Closing enterprise deals with strategic grit, solving complex puzzles with a tool-savvy mind.\"",
     
     capTitle: "Core Capabilities",
@@ -128,7 +130,7 @@ const content = {
       },
       {
         title: "Ecosystem & Partnership Development",
-        desc: "Deep understanding of the business workflows in high-end manufacturing. Capable of translating cutting-edge infrastructure into robust business solutions that bridge the gap between agile innovation and strict compliance."
+        desc: "Strategic approach to scaling business beyond direct sales by forging powerful alliances. Proficient in partnering with complementary software vendors, integrators, and consulting firms to deliver joint solutions and amplify regional market presence."
       }
     ],
 
@@ -200,7 +202,9 @@ const content = {
         title: "The Modern Tech Sales Evolution Model",
         desc: "Maintaining a 'rookie's hunger for learning' to code and deploy architectures independently to build peer trust with CTOs. Seamlessly navigating complex human matrices to balance developer passion with executive risk mitigation. Infusing the strategic endurance and psychological resilience of marathon training into grueling enterprise sales cycles to cross the finish line."
       }
-    ]
+    ],
+    ctaTitle: "Initiate the Next Campaign",
+    ctaSub: "Looking for a strategic sales partner with technical empathy and relentless execution? Let's connect."
   }
 };
 
@@ -228,11 +232,11 @@ export default function App() {
               {lang === 'zh' ? 'EN' : '中文'}
             </button>
             <a 
-              href="mailto:Rookiexu11@proton.me"
-              className="flex items-center gap-1.5 text-xs sm:text-sm text-white bg-slate-900 hover:bg-slate-800 px-4 py-1.5 rounded-full font-semibold transition-all hover:scale-[1.02] shadow-sm"
+              href="mailto:xch10400@gmail.com"
+              className="flex items-center gap-1.5 text-xs sm:text-sm font-mono text-white bg-slate-900 hover:bg-slate-800 px-4 py-1.5 rounded-full font-semibold transition-all hover:scale-[1.02] shadow-sm"
             >
               <Mail className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">{t.contactBtn}</span>
+              <span>{t.contactBtn}</span>
             </a>
           </div>
         </div>
@@ -365,7 +369,7 @@ export default function App() {
       </section>
 
       {/* 销售哲学收尾模块 */}
-      <section className="py-16 sm:py-24 bg-gradient-to-b from-slate-50 to-white">
+      <section className="py-16 sm:py-24 border-b border-slate-200/60 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
             <div className="inline-flex items-center gap-1.5 border border-slate-200 bg-white px-3 py-1 rounded-full text-xs font-semibold text-slate-500 mb-4 shadow-sm">
@@ -383,6 +387,23 @@ export default function App() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 新增：联络与转化卡片区 */}
+      <section className="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-12 shadow-xl text-white flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="space-y-3 text-center md:text-left">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">{t.ctaTitle}</h2>
+            <p className="text-slate-300 text-sm sm:text-base max-w-xl">{t.ctaSub}</p>
+          </div>
+          <a 
+            href="mailto:xch10400@gmail.com" 
+            className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-900 font-mono font-semibold px-6 py-3 rounded-2xl shadow-md transition-all hover:scale-[1.02] shrink-0"
+          >
+            <Mail className="w-4 h-4 text-slate-700" />
+            xch10400@gmail.com
+          </a>
         </div>
       </section>
 
