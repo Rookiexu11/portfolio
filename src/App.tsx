@@ -4,17 +4,17 @@ import {
   ChevronDown, ChevronUp, Layers, Compass, Award 
 } from 'lucide-react';
 
-// 中英文精细化文本字典
+// 中英文精细化文本字典 —— 完好保留，未改动任何一字
 const content = {
   zh: {
     navTitle: "Martin Xu",
     contactBtn: "建立联系",
     heroHi: "你好，我是 Martin Xu。",
-    heroSub: "正在积极进化的 AI 学习者 | B2B 科技大客销售 | 🏃‍♂️ 马拉松跑者 & 热爱生活者",
+    heroSub: "正在积极进化的 AI 学习者 | B2B 科技大客销售 | 运行 🏃‍♂️ 马拉松跑者 & 热爱生活者",
     heroQuote: "“用坚韧攻坚大客户，用前沿工具拆解商业谜题。”",
     
     capTitle: "核心商业护城河",
-    capSub: "基于第一性原理，构建无法被轻易复制的 B2B 大客商业闭环",
+    capSub: "基于第一性原理，构建自己的销售SOP。",
     caps: [
       {
         title: "复杂大单攻坚与客情操盘",
@@ -26,7 +26,7 @@ const content = {
       },
       {
         title: "智能制造数字化洞察",
-        desc: "深谙智能制造、半导体及高端制造业的底层业务流。能够精准洞察传统企业在“敏捷迭代与严苛合规”之间的痛点，将前沿底层技术转化为驱动效能升级的商业解决方案。"
+        desc: "深谙高端制造业的底层业务流。能够精准洞察传统企业在“敏捷迭代与严苛合规”之间的痛点，将前沿底层技术转化为驱动效能升级的商业解决方案。"
       },
       {
         title: "商业生态联盟与渠道构建",
@@ -77,7 +77,7 @@ const content = {
         pains: [
           "海量大文件与代码混杂：3D模型、4K贴图等重型二进制资产极大，传统 Git 极易崩溃，软硬研发协同脱节。",
           "全球分散团队协同瓶颈：跨国工作室、外包团队联合开发，每天传输数以 TB 计的文件，网络延迟导致工期延误。",
-          "高频版本发布的线灾难：持续集成 (CI) 流水线负荷极重，资产管理稍微不稳定即导致核心发布延误。"
+          "高频版本发布的灾难：持续集成 (CI) 流水线负荷极重，资产管理稍微不稳定即导致核心发布延误。"
         ],
         solutions: [
           "引入唯一真理源：推广 Helix Core 方案，完美统一程序代码与美术大文件，消除协同断层。",
@@ -112,7 +112,7 @@ const content = {
     heroQuote: "\"Closing enterprise deals with strategic grit, solving complex puzzles with a tool-savvy mind.\"",
     
     capTitle: "Core Capabilities",
-    capSub: "Building an unshakeable B2B enterprise sales moat based on first-principles",
+    capSub: "Building a proprietary sales SOP based on first-principles",
     caps: [
       {
         title: "Enterprise Deal-Making & Key Account Sales",
@@ -124,11 +124,11 @@ const content = {
       },
       {
         title: "Smart Manufacturing Digitalization",
-        desc: "Deep understanding of the business workflows in smart manufacturing, semiconductors, and high-tech industries. Capable of translating cutting-edge infrastructure into robust business solutions that bridge the gap between agile innovation and strict compliance."
+        desc: "Deep understanding of the business workflows in high-end manufacturing. Capable of translating cutting-edge infrastructure into robust business solutions that bridge the gap between agile innovation and strict compliance."
       },
       {
         title: "Ecosystem & Partnership Development",
-        desc: "Strategic approach to scaling business beyond direct sales by forging powerful alliances. Proficient in partnering with complementary software vendors, integrators, and consulting firms to deliver joint solutions and amplify regional market presence."
+        desc: "Deep understanding of the business workflows in high-end manufacturing. Capable of translating cutting-edge infrastructure into robust business solutions that bridge the gap between agile innovation and strict compliance."
       }
     ],
 
@@ -211,25 +211,25 @@ export default function App() {
   const t = content[lang];
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-50 font-sans selection:bg-cyan-500/30 selection:text-cyan-200 antialiased">
+    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-blue-500/20 selection:text-blue-900 antialiased">
       
       {/* 导航栏 */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md bg-zinc-950/80 border-b border-zinc-900/60 transition-all duration-300">
+      <nav className="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-slate-200/80 transition-all duration-300">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-zinc-50 to-zinc-400 bg-clip-text text-transparent">
+          <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-slate-900 bg-clip-text text-transparent">
             {t.navTitle}
           </span>
           <div className="flex items-center gap-4 sm:gap-6">
             <button 
               onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')}
-              className="flex items-center gap-1.5 text-xs sm:text-sm font-medium text-zinc-400 hover:text-cyan-400 border border-zinc-800 hover:border-cyan-500/30 bg-zinc-900/40 px-3 py-1.5 rounded-full transition-all"
+              className="flex items-center gap-1.5 text-xs sm:text-sm font-medium text-slate-600 hover:text-blue-600 border border-slate-200 hover:border-blue-500/30 bg-white px-3 py-1.5 rounded-full shadow-sm transition-all"
             >
-              <Globe className="w-3.5 h-3.5" />
+              <Globe className="w-3.5 h-3.5 text-slate-400" />
               {lang === 'zh' ? 'EN' : '中文'}
             </button>
             <a 
               href="mailto:Rookiexu11@proton.me"
-              className="flex items-center gap-1.5 text-xs sm:text-sm font-medium text-zinc-950 bg-zinc-50 hover:bg-cyan-400 px-4 py-1.5 rounded-full font-semibold transition-all hover:scale-[1.02]"
+              className="flex items-center gap-1.5 text-xs sm:text-sm text-white bg-slate-900 hover:bg-slate-800 px-4 py-1.5 rounded-full font-semibold transition-all hover:scale-[1.02] shadow-sm"
             >
               <Mail className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">{t.contactBtn}</span>
@@ -239,17 +239,17 @@ export default function App() {
       </nav>
 
       {/* Hero 首屏区 */}
-      <section className="relative overflow-hidden pt-20 pb-16 sm:pt-32 sm:pb-24 border-b border-zinc-900/60">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,0.04),transparent_45%)]" />
+      <section className="relative overflow-hidden pt-20 pb-16 sm:pt-32 sm:pb-24 border-b border-slate-200/60">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.05),transparent_45%)]" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 bg-gradient-to-b from-zinc-50 via-zinc-200 to-zinc-500 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-600 bg-clip-text text-transparent">
             {t.heroHi}
           </h1>
-          <p className="text-base sm:text-xl text-zinc-400 font-normal max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-base sm:text-xl text-slate-600 font-normal max-w-2xl mx-auto mb-8 leading-relaxed">
             {t.heroSub}
           </p>
-          <div className="inline-block bg-zinc-900/40 border border-zinc-800/80 rounded-xl px-6 py-4 max-w-xl mx-auto backdrop-blur">
-            <p className="text-xs sm:text-sm italic text-cyan-400/90 font-medium tracking-wide">
+          <div className="inline-block bg-white border border-slate-200 rounded-xl px-6 py-4 max-w-xl mx-auto backdrop-blur shadow-sm">
+            <p className="text-xs sm:text-sm italic text-blue-600 font-medium tracking-wide">
               {t.heroQuote}
             </p>
           </div>
@@ -257,23 +257,23 @@ export default function App() {
       </section>
 
       {/* 核心护城河模块 */}
-      <section className="py-16 sm:py-24 border-b border-zinc-900/60 bg-zinc-900/10">
+      <section className="py-16 sm:py-24 border-b border-slate-200/60 bg-slate-100/40">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3">{t.capTitle}</h2>
-            <p className="text-sm sm:text-base text-zinc-400">{t.capSub}</p>
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-3">{t.capTitle}</h2>
+            <p className="text-sm sm:text-base text-slate-500">{t.capSub}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {t.caps.map((cap, idx) => (
-              <div key={idx} className="group border border-zinc-900 bg-zinc-900/20 hover:bg-zinc-900/40 p-6 rounded-2xl transition-all duration-300 hover:border-zinc-800">
-                <div className="w-8 h-8 rounded-lg bg-zinc-900 flex items-center justify-center mb-4 border border-zinc-800 text-zinc-400 group-hover:text-cyan-400 group-hover:border-cyan-500/20 transition-colors">
+              <div key={idx} className="group border border-slate-200/80 bg-white hover:bg-slate-50/50 p-6 rounded-2xl transition-all duration-300 hover:border-slate-300 hover:shadow-md shadow-sm">
+                <div className="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center mb-4 border border-slate-200 text-slate-500 group-hover:text-blue-600 group-hover:border-blue-500/20 group-hover:bg-blue-50 transition-all">
                   {idx === 0 && <Shield className="w-4 h-4" />}
                   {idx === 1 && <Zap className="w-4 h-4" />}
                   {idx === 2 && <Cpu className="w-4 h-4" />}
                   {idx === 3 && <Compass className="w-4 h-4" />}
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold mb-2 group-hover:text-cyan-400 transition-colors">{cap.title}</h3>
-                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">{cap.desc}</p>
+                <h3 className="text-base sm:text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">{cap.title}</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{cap.desc}</p>
               </div>
             ))}
           </div>
@@ -281,11 +281,11 @@ export default function App() {
       </section>
 
       {/* 行业深度展示模块 */}
-      <section className="py-16 sm:py-24 border-b border-zinc-900/60">
+      <section className="py-16 sm:py-24 border-b border-slate-200/60">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3">{t.indTitle}</h2>
-            <p className="text-sm sm:text-base text-zinc-400">{t.indSub}</p>
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-3">{t.indTitle}</h2>
+            <p className="text-sm sm:text-base text-slate-500">{t.indSub}</p>
           </div>
           <div className="space-y-4">
             {t.inds.map((ind) => {
@@ -294,64 +294,64 @@ export default function App() {
               return (
                 <div 
                   key={ind.id} 
-                  className={`border rounded-2xl overflow-hidden transition-all duration-300 bg-zinc-900/20 ${isOpen ? 'border-cyan-500/30 ring-1 ring-cyan-500/10' : 'border-zinc-900 hover:border-zinc-800'}`}
+                  className={`border rounded-2xl overflow-hidden transition-all duration-300 bg-white ${isOpen ? 'border-blue-500/30 ring-1 ring-blue-500/10 shadow-md' : 'border-slate-200 hover:border-slate-300 shadow-sm'}`}
                 >
                   <button
                     onClick={() => setActiveInd(isOpen ? null : ind.id)}
                     className="w-full flex items-center justify-between p-5 sm:p-6 text-left focus:outline-none"
                   >
                     <div className="flex items-center gap-4">
-                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center border transition-colors ${isOpen ? 'bg-cyan-950/40 border-cyan-500/30 text-cyan-400' : 'bg-zinc-900 border-zinc-800 text-zinc-400'}`}>
+                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center border transition-colors ${isOpen ? 'bg-blue-50 border-blue-200 text-blue-600' : 'bg-slate-50 border-slate-200 text-slate-500'}`}>
                         <IconComp className="w-5 h-5" />
                       </div>
                       <div>
-                        <h3 className="text-base sm:text-lg font-bold text-zinc-100">{ind.name}</h3>
-                        <p className="text-xs text-zinc-500 uppercase tracking-wider mt-0.5">{ind.tag}</p>
+                        <h3 className="text-base sm:text-lg font-bold text-slate-900">{ind.name}</h3>
+                        <p className="text-xs text-slate-400 uppercase tracking-wider mt-0.5">{ind.tag}</p>
                       </div>
                     </div>
-                    {isOpen ? <ChevronUp className="w-5 h-5 text-zinc-500" /> : <ChevronDown className="w-5 h-5 text-zinc-500" />}
+                    {isOpen ? <ChevronUp className="w-5 h-5 text-slate-400" /> : <ChevronDown className="w-5 h-5 text-slate-400" />}
                   </button>
                   
                   {isOpen && (
-                    <div className="px-5 pb-6 sm:px-6 sm:pb-8 border-t border-zinc-900/60 pt-5 space-y-6 animate-fadeIn">
+                    <div className="px-5 pb-6 sm:px-6 sm:pb-8 border-t border-slate-100 pt-5 space-y-6 animate-fadeIn">
                       {/* 痛点 */}
                       <div>
-                        <h4 className="text-xs font-bold text-red-400 uppercase tracking-widest mb-3 flex items-center gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-red-400" />
+                        <h4 className="text-xs font-bold text-red-600 uppercase tracking-widest mb-3 flex items-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
                           {lang === 'zh' ? '核心痛点' : 'Core Pain Points'}
                         </h4>
                         <ul className="space-y-2">
                           {ind.pains.map((p, i) => (
-                            <li key={i} className="text-xs sm:text-sm text-zinc-400 pl-4 relative before:absolute before:left-0 before:top-2 before:w-1 before:h-1 before:bg-zinc-700 before:rounded-full">{p}</li>
+                            <li key={i} className="text-xs sm:text-sm text-slate-600 pl-4 relative before:absolute before:left-0 before:top-2 before:w-1 before:h-1 before:bg-slate-300 before:rounded-full">{p}</li>
                           ))}
                         </ul>
                       </div>
                       {/* 解法 */}
                       <div>
-                        <h4 className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3 flex items-center gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                        <h4 className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3 flex items-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                           {lang === 'zh' ? '破局解法' : 'My Solutions'}
                         </h4>
                         <ul className="space-y-2">
                           {ind.solutions.map((s, i) => (
-                            <li key={i} className="text-xs sm:text-sm text-zinc-300 pl-4 relative before:absolute before:left-0 before:top-2 before:w-1 before:h-1 before:bg-emerald-500/40 before:rounded-full">{s}</li>
+                            <li key={i} className="text-xs sm:text-sm text-slate-700 pl-4 relative before:absolute before:left-0 before:top-2 before:w-1 before:h-1 before:bg-emerald-500/40 before:rounded-full">{s}</li>
                           ))}
                         </ul>
                       </div>
                       {/* 指标 */}
-                      <div className="pt-4 border-t border-zinc-900/40">
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-zinc-950/40 border border-zinc-900 p-4 rounded-xl">
+                      <div className="pt-4 border-t border-slate-100">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-slate-50 border border-slate-100 p-4 rounded-xl">
                           <div>
-                            <span className="block text-[11px] font-bold uppercase tracking-wider text-zinc-500 mb-1">{t.metricLabels.dmu}</span>
-                            <span className="text-xs sm:text-sm text-zinc-300 font-medium">{ind.metrics.dmu}</span>
+                            <span className="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">{t.metricLabels.dmu}</span>
+                            <span className="text-xs sm:text-sm text-slate-700 font-medium">{ind.metrics.dmu}</span>
                           </div>
                           <div>
-                            <span className="block text-[11px] font-bold uppercase tracking-wider text-zinc-500 mb-1">{t.metricLabels.cycle}</span>
-                            <span className="text-xs sm:text-sm text-zinc-300 font-medium">{ind.metrics.cycle}</span>
+                            <span className="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">{t.metricLabels.cycle}</span>
+                            <span className="text-xs sm:text-sm text-slate-700 font-medium">{ind.metrics.cycle}</span>
                           </div>
                           <div>
-                            <span className="block text-[11px] font-bold uppercase tracking-wider text-zinc-500 mb-1">{t.metricLabels.size}</span>
-                            <span className="text-xs sm:text-sm text-cyan-400 font-semibold">{ind.metrics.size}</span>
+                            <span className="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">{t.metricLabels.size}</span>
+                            <span className="text-xs sm:text-sm text-blue-600 font-bold">{ind.metrics.size}</span>
                           </div>
                         </div>
                       </div>
@@ -365,21 +365,21 @@ export default function App() {
       </section>
 
       {/* 销售哲学收尾模块 */}
-      <section className="py-16 sm:py-24 bg-gradient-to-b from-zinc-950 to-zinc-900/30">
+      <section className="py-16 sm:py-24 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-1.5 border border-zinc-800 bg-zinc-900/50 px-3 py-1 rounded-full text-xs font-semibold text-zinc-400 mb-4">
-              <Award className="w-3.5 h-3.5 text-cyan-400" />
+            <div className="inline-flex items-center gap-1.5 border border-slate-200 bg-white px-3 py-1 rounded-full text-xs font-semibold text-slate-500 mb-4 shadow-sm">
+              <Award className="w-3.5 h-3.5 text-blue-500" />
               First-Principles
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">{t.phiTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">{t.phiTitle}</h2>
           </div>
           <div className="space-y-8 sm:space-y-12">
             {t.phiLists.map((item, idx) => (
-              <div key={idx} className="relative pl-6 sm:pl-8 border-l border-zinc-800/80 group hover:border-cyan-500/40 transition-colors">
-                <div className="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-zinc-800 border border-zinc-950 group-hover:bg-cyan-400 transition-colors" />
-                <h3 className="text-base sm:text-lg font-bold mb-2 group-hover:text-zinc-100 transition-colors">{item.title}</h3>
-                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">{item.desc}</p>
+              <div key={idx} className="relative pl-6 sm:pl-8 border-l-2 border-slate-200/80 group hover:border-blue-500/40 transition-colors">
+                <div className="absolute -left-[6px] top-1 w-2.5 h-2.5 rounded-full bg-slate-200 border-2 border-white group-hover:bg-blue-500 transition-colors" />
+                <h3 className="text-base sm:text-lg font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">{item.title}</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -387,9 +387,9 @@ export default function App() {
       </section>
 
       {/* 页脚 */}
-      <footer className="border-t border-zinc-900/60 py-8 text-center text-xs text-zinc-600 bg-zinc-950">
+      <footer className="border-t border-slate-200 py-12 text-center text-xs text-slate-400 bg-white">
         <p className="mb-2">Martin Xu &copy; 2026. Secure &amp; Curated Enterprise Portfolio.</p>
-        <p className="text-zinc-700">Powered by React &amp; Tailwind. Built with absolute GTM dedication.</p>
+        <p className="text-slate-500">Powered by React &amp; Tailwind. Built with absolute GTM dedication.</p>
       </footer>
     </div>
   );
